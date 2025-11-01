@@ -11,7 +11,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.9, ease: "easeOut", staggerChildren: 0.15 },
+      transition: { duration: 0.9, staggerChildren: 0.15 },
     },
   };
   const item = { hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } };
@@ -20,7 +20,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.3, ease: "easeOut" },
+      transition: { duration: 1.3 },
     },
   };
   return (

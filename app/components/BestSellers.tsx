@@ -33,7 +33,7 @@ export default function BestSellers() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8 },
     },
   };
   const list = {
@@ -45,7 +45,7 @@ export default function BestSellers() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.65, ease: "easeOut" },
+      transition: { duration: 0.65 },
     },
   };
   return (
