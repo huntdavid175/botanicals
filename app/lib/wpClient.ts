@@ -1,0 +1,26 @@
+export type GraphQLResponse<T> = {
+  data?: T;
+  errors?: Array<{ message: string }>;
+};
+
+const ENDPOINT = process.env.WORDPRESS_ENDPOINT as string;
+
+export async function gqlRequest<T>(
+  query: string,
+  variables?: Record<string, unknown>
+) {
+  if (!ENDPOINT) throw new Error("WORDPRESS_ENDPOINT is not set");
+  const res = await fetch(ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query, variables }),
+    // ISR-friendly caching; adjust as needed
+    next: { revalidate: 60 },
+  });
+
+  if (!res.ok) throw new Error(`GraphQL HTTP error ${res.status}`);
+  const json = (await res.json()) as GraphQLResponse<T>;
+  if (json.errors?.length)
+    throw new Error(json.errors.map((e) => e.message).join("\n"));
+  return json.data as T;
+}

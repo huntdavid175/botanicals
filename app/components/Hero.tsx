@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 const HERO_IMAGE_URL =
   "https://framerusercontent.com/images/20QD5xeVLKBmv7ucQrtU5RfOUU.png?width=1024&height=1536";
 
-export default function Hero() {
+type HeroProps = { titleOverride?: string; imageOverride?: string };
+
+export default function Hero({ titleOverride, imageOverride }: HeroProps) {
+  console.log(imageOverride);
   const container = {
     hidden: { opacity: 0, y: 24 },
     visible: {
@@ -40,9 +43,9 @@ export default function Hero() {
             className="font-heading text-5xl md:text-7xl leading-tight tracking-tight text-black text-center md:text-left ls-title"
             variants={text}
           >
-            Skincare That
-            <br /> Loves Your
-            <br /> Melanin Skin
+            {titleOverride ? (
+              <span dangerouslySetInnerHTML={{ __html: titleOverride }} />
+            ) : null}
           </motion.h1>
 
           <div className="mt-8 flex justify-center md:justify-start">
@@ -72,7 +75,7 @@ export default function Hero() {
           variants={item}
         >
           <Image
-            src={HERO_IMAGE_URL}
+            src={imageOverride || ""}
             alt="Smiling woman applying skincare cream"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
