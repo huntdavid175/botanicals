@@ -7,6 +7,7 @@ type CategoriesQuery = {
   productCategories?: {
     nodes?: Array<{
       name?: string | null;
+      slug?: string | null;
       image?: { sourceUrl?: string | null } | null;
     }> | null;
   } | null;
@@ -18,6 +19,7 @@ const QUERY = `
       nodes {
         image { sourceUrl }
         name
+        slug
       }
     }
   }
@@ -33,8 +35,14 @@ export default async function SkinConcerns({ title }: SkinConcernsProps) {
       .map((n) => ({
         title: n?.name || "",
         imageUrl: n?.image?.sourceUrl || "",
+        slug: (n?.slug || n?.name || "")
+          .toString()
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[^a-z0-9-]/g, ""),
       }))
-      .filter((i) => i.title && i.imageUrl);
+      .filter((i) => i.title && i.imageUrl && i.slug);
   } catch (_) {}
 
   return <SkinConcernsClient title={title} items={items} />;

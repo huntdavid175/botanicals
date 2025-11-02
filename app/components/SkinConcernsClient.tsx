@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export type SkinConcernItem = { title: string; imageUrl: string };
+export type SkinConcernItem = { title: string; imageUrl: string; slug: string };
 
 export default function SkinConcernsClient({
   title,
@@ -41,11 +41,7 @@ export default function SkinConcernsClient({
         variants={list}
       >
         {items.map((c) => {
-          const slug = c.title
-            .toLowerCase()
-            .replace(/[^a-z0-9\s-]/g, "")
-            .trim()
-            .replace(/\s+/g, "-");
+          const slug = c.slug;
           return (
             <motion.div
               key={c.title}

@@ -7,9 +7,10 @@ import type { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { id?: string };
+  params: Promise<{ id?: string }>;
 }): Promise<Metadata> {
-  const slug = typeof params?.id === "string" ? params.id : "";
+  const awaited = await params;
+  const slug = typeof awaited?.id === "string" ? awaited.id : "";
   const pretty = slug
     ? slug
         .split("-")
@@ -19,11 +20,17 @@ export async function generateMetadata({
   return { title: `Collections/${pretty} | Revive Botanicals` };
 }
 
-export default function CollectionPage() {
+export default async function CollectionPage({
+  params,
+}: {
+  params: Promise<{ id?: string }>;
+}) {
+  const awaited = await params;
+  const slug = typeof awaited?.id === "string" ? awaited.id : "";
   return (
     <main className="max-w-[1498px]  mx-auto md:px-6 px-4 pb-16">
       <CollectionHero />
-      <CollectionGrid />
+      <CollectionGrid categoryParam={slug} />
       <BrandVideo />
       <Testimonials />
     </main>
