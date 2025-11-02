@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { useCart } from "@/app/components/CartProvider";
+import { checkoutStoreFromForm } from "@/app/actions/woocommerce";
 
 type Media = { type: "image" | "video"; src: string };
 
@@ -229,9 +230,19 @@ export default function ProductPageClient({
               >
                 Add to Cart
               </button>
-              <button className="h-14 rounded-full bg-black text-white text-lg">
-                Buy Now
-              </button>
+              <form action={checkoutStoreFromForm} className="contents">
+                <input
+                  type="hidden"
+                  name="items"
+                  value={JSON.stringify([{ id: product.id, qty }])}
+                />
+                <button
+                  type="submit"
+                  className="h-14 rounded-full bg-black text-white text-lg"
+                >
+                  Buy Now
+                </button>
+              </form>
             </div>
 
             {/* Ingredients accordion – omitted to keep client file focused */}

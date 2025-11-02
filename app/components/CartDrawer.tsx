@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "./CartProvider";
+import { checkoutStoreFromForm } from "@/app/actions/woocommerce";
 
 export default function CartDrawer() {
   const { isOpen, close, items, updateQty, removeItem, subtotal } = useCart();
@@ -104,9 +105,24 @@ export default function CartDrawer() {
                   ${subtotal.toFixed(2)}
                 </span>
               </div>
-              <button className="mt-4 w-full h-14 rounded-full bg-black text-white text-lg">
-                Checkout
-              </button>
+              <form
+                action={checkoutStoreFromForm}
+                className="mt-4"
+                onSubmit={(e) => {
+                  if (totalQty === 0) e.preventDefault();
+                }}
+              >
+                <input
+                  type="hidden"
+                  name="items"
+                  value={JSON.stringify(
+                    items.map((i) => ({ id: i.id, qty: i.qty }))
+                  )}
+                />
+                <button className="w-full h-14 rounded-full bg-black text-white text-lg">
+                  Checkout
+                </button>
+              </form>
             </div>
           </motion.aside>
         </>
