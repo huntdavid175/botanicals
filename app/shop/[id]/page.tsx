@@ -51,6 +51,7 @@ const PRODUCT_QUERY = `
   query NewQuery($slug: ID!) {
     product(id: $slug, idType: SLUG) {
       id
+      databaseId
       featuredImage { node { sourceUrl } }
       galleryImages { nodes { sourceUrl } }
       slug
@@ -129,6 +130,10 @@ export default async function ProductPage({
       }
       productData = {
         id: p.slug || slug,
+        numericId:
+          typeof (p as any)?.databaseId === "number"
+            ? (p as any).databaseId
+            : undefined,
         title: p.name || p.slug || slug,
         price:
           parseFloat(

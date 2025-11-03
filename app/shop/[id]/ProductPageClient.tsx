@@ -17,6 +17,7 @@ type Product = {
   description: string;
   media: Media[];
   ingredients?: string[];
+  numericId?: number;
 };
 
 const HERO_IMAGE_URL =
@@ -219,7 +220,7 @@ export default function ProductPageClient({
               <button
                 onClick={() =>
                   addItem({
-                    id: product.id,
+                    id: String(product.numericId ?? product.id),
                     title: product.title,
                     imageUrl: product.media[0]?.src ?? "",
                     price: product.price,
@@ -234,7 +235,9 @@ export default function ProductPageClient({
                 <input
                   type="hidden"
                   name="items"
-                  value={JSON.stringify([{ id: product.id, qty }])}
+                  value={JSON.stringify([
+                    { id: String(product.numericId ?? product.id), qty },
+                  ])}
                 />
                 <button
                   type="submit"

@@ -9,6 +9,7 @@ export type CollectionProduct = {
   price: string;
   imageUrl: string;
   rating: number;
+  productId?: number;
 };
 
 export default function CollectionGridClient({
@@ -58,6 +59,7 @@ export default function CollectionGridClient({
                 price={p.price}
                 imageUrl={p.imageUrl}
                 rating={p.rating}
+                productId={p.productId}
                 href={`/shop/${slug}`}
               />
             </motion.div>

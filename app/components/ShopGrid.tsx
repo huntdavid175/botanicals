@@ -36,6 +36,8 @@ const QUERY = `
           edges {
             node {
               name
+              slug
+              databaseId
               productCategories { nodes { name } }
               productId
               ... on SimpleProduct {
@@ -109,6 +111,12 @@ export default async function ShopGrid() {
             imageUrl,
             rating: 5,
             categoryKeys,
+            productId:
+              typeof n?.databaseId === "number"
+                ? n.databaseId
+                : typeof n?.productId === "number"
+                ? n.productId
+                : undefined,
           });
         }
       }

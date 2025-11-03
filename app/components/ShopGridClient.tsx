@@ -10,6 +10,7 @@ export type ClientProduct = {
   imageUrl: string;
   rating: number;
   categoryKeys: string[];
+  productId?: number;
 };
 
 export type FilterOption = { key: string; label: string };
@@ -96,6 +97,7 @@ export default function ShopGridClient({
                 price={p.price}
                 imageUrl={p.imageUrl}
                 rating={p.rating}
+                productId={p.productId}
                 hoverCart={true}
                 href={`/shop/${slug}`}
               />

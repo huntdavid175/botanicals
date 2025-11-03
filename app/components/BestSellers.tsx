@@ -9,6 +9,8 @@ type ProductsQuery = {
         name?: string | null;
         __typename?: string;
         id?: string | null;
+        slug?: string | null;
+        databaseId?: number | null;
         featuredImage?: { node?: { sourceUrl?: string | null } | null } | null;
         price?: string | null;
         regularPrice?: string | null;
@@ -23,6 +25,8 @@ const QUERY = `
       edges {
         node {
           featured
+          slug
+          databaseId
           name
           ... on SimpleProduct {
             id
@@ -57,7 +61,9 @@ export default async function BestSellersServer() {
       const priceRaw: unknown = n?.price ?? n?.regularPrice ?? "$0.00";
       const price: string =
         typeof priceRaw === "string" ? priceRaw : `$${priceRaw}`;
-      return { title, price, imageUrl, rating: 5 };
+      const productId: number | undefined =
+        typeof n?.databaseId === "number" ? n.databaseId : undefined;
+      return { title, price, imageUrl, rating: 5, productId };
     });
   } catch (_) {}
 

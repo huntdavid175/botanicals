@@ -10,6 +10,7 @@ type ProductCardProps = {
   rating: number; // 0-5
   hoverCart?: boolean; // when true, stars swap to Add to Cart on hover
   href?: string; // link to product detail for arrow button
+  productId?: number; // numeric Woo product id for checkout
 };
 
 export default function ProductCard({
@@ -19,6 +20,7 @@ export default function ProductCard({
   rating,
   hoverCart = true,
   href,
+  productId,
 }: ProductCardProps) {
   const { addItem } = useCart();
   const priceNum = Number((price || "").replace(/[^0-9.]/g, ""));
@@ -72,7 +74,13 @@ export default function ProductCard({
           <button
             onClick={() =>
               addItem({
-                id: title.toLowerCase().replace(/\s+/g, "-"),
+                id: productId
+                  ? String(productId)
+                  : title
+                      .toLowerCase()
+                      .replace(/[^a-z0-9\s-]/g, "")
+                      .trim()
+                      .replace(/\s+/g, "-"),
                 title,
                 imageUrl,
                 price: priceNum,

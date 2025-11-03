@@ -13,6 +13,8 @@ type ProductsByCategoryQuery = {
         price?: string | null;
         regularPrice?: string | null;
         featuredImage?: { node?: { sourceUrl?: string | null } | null } | null;
+        databaseId?: number | null;
+        slug?: string | null;
       };
     }> | null;
   } | null;
@@ -24,6 +26,8 @@ const QUERY = `
       edges {
         node {
           id
+          databaseId
+          slug
           name
           ... on SimpleProduct {
             id
@@ -47,6 +51,8 @@ const CATEGORY_FALLBACK_QUERY = `
             node {
               id
               name
+              slug
+              databaseId
               ... on SimpleProduct {
                 id
                 name
@@ -93,7 +99,9 @@ export default async function CollectionGrid({
       const priceRaw: unknown = n?.price ?? n?.regularPrice ?? "$0.00";
       const price: string =
         typeof priceRaw === "string" ? priceRaw : `$${priceRaw}`;
-      return { title, price, imageUrl, rating: 5 };
+      const productId: number | undefined =
+        typeof n?.databaseId === "number" ? n.databaseId : undefined;
+      return { title, price, imageUrl, rating: 5, productId };
     });
   } catch (e) {
     throw e;

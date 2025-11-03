@@ -9,6 +9,7 @@ export type BestSellerItem = {
   price: string; // formatted
   imageUrl: string;
   rating: number;
+  productId?: number;
 };
 
 export default function BestSellersClient({
@@ -66,6 +67,7 @@ export default function BestSellersClient({
                 price={p.price}
                 imageUrl={p.imageUrl}
                 rating={p.rating}
+                productId={p.productId}
                 href={`/shop/${slug}`}
               />
             </motion.div>
