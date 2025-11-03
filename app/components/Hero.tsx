@@ -17,7 +17,6 @@ export default function Hero({
   imageOverride,
   avatars,
 }: HeroProps) {
-  console.log(imageOverride);
   const container = {
     hidden: { opacity: 0, y: 24 },
     visible: {
@@ -97,11 +96,8 @@ export default function Hero({
           </div>
         </motion.div>
 
-        {/* Right: Image */}
-        <motion.div
-          className="relative w-full h-full min-h-[440px] md:min-h-[640px] rounded-3xl overflow-hidden"
-          variants={item}
-        >
+        {/* Right: Image (do not animate LCP) */}
+        <div className="relative w-full h-full min-h-[440px] md:min-h-[640px] rounded-3xl overflow-hidden">
           <Image
             src={imageOverride || ""}
             alt="Smiling woman applying skincare cream"
@@ -110,7 +106,7 @@ export default function Hero({
             className="object-cover"
             priority
           />
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

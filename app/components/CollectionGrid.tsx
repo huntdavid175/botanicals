@@ -73,9 +73,6 @@ export default async function CollectionGrid({
   ).toLowerCase();
   const category = slugOriginal.replace(/-/g, "");
 
-  console.log("category(normalized)", category);
-  console.log("slugOriginal", slugOriginal);
-
   let items: CollectionProduct[] = [];
   try {
     if (!category) {
