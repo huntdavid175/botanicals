@@ -96,7 +96,7 @@ export default function ProductCard({
           <Link
             href={href}
             aria-label="Open product"
-            className="absolute right-0 bottom-0 h-10 w-10 rounded-full bg-[#A33D4A] text-white flex items-center justify-center"
+            className="absolute right-0 bottom-0 h-10 w-10 rounded-full bg-[#74a636] text-white flex items-center justify-center"
           >
             <svg
               width="18"
@@ -115,7 +115,7 @@ export default function ProductCard({
         ) : (
           <button
             aria-label="Open product"
-            className="absolute right-0 bottom-0 h-10 w-10 rounded-full bg-[#A33D4A] text-white flex items-center justify-center"
+            className="absolute right-0 bottom-0 h-10 w-10 rounded-full bg-[#74a636] text-white flex items-center justify-center"
           >
             <svg
               width="18"

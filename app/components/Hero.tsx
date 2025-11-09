@@ -58,7 +58,7 @@ export default function Hero({
           <div className="mt-8 flex justify-center md:justify-start">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+              className="inline-flex items-center justify-center rounded-full bg-[#74a636] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
             >
               Shop Now
             </Link>

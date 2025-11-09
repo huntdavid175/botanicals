@@ -75,7 +75,7 @@ export default function CollectionGridClient({
           <motion.button
             whileTap={{ scale: 0.98 }}
             onClick={() => setVisible((v) => Math.min(v + 8, items.length))}
-            className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+            className="inline-flex items-center justify-center rounded-full bg-[#74a636] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
           >
             Load More
           </motion.button>

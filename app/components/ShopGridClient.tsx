@@ -60,7 +60,7 @@ export default function ShopGridClient({
               onClick={() => setFilterKey(f.key)}
               className={
                 active
-                  ? "px-8 h-12 rounded-full bg-[#A33D4A] text-white"
+                  ? "px-8 h-12 rounded-full bg-[#74a636] text-white"
                   : "px-8 h-12 rounded-full bg-white border border-black/10 text-black"
               }
             >
@@ -114,7 +114,7 @@ export default function ShopGridClient({
           <motion.button
             whileTap={{ scale: 0.98 }}
             onClick={() => setVisible((v) => Math.min(v + 4, items.length))}
-            className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+            className="inline-flex items-center justify-center rounded-full bg-[#74a636] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
           >
             Load More
           </motion.button>

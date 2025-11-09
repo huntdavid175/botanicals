@@ -228,7 +228,7 @@ export default function ProductPageClient({
                     qty,
                   })
                 }
-                className="h-14 rounded-full bg-[#A33D4A] text-white text-lg"
+                className="h-14 rounded-full bg-[#74a636] text-white text-lg"
               >
                 Add to Cart
               </button>

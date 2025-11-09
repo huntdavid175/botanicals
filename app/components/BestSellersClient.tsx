@@ -81,7 +81,7 @@ export default function BestSellersClient({
       <div className="mt-10 flex justify-center">
         <Link
           href="/shop"
-          className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+          className="inline-flex items-center justify-center rounded-full bg-[#74a636] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
         >
           See all product
         </Link>

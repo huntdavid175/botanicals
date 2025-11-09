@@ -102,7 +102,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/shop"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     Shop
                   </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/collection"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     Collection
                   </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     About
                   </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/shipping-policy"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     Shipping Policy
                   </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/return-policy"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     Return policy
                   </Link>
@@ -147,7 +147,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacy-policy"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     Privacy policy
                   </Link>
@@ -155,7 +155,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/terms-of-service"
-                    className="transition-colors hover:text-[#A33D4A]"
+                    className="transition-colors hover:text-[#74a636]"
                   >
                     Terms of Service
                   </Link>

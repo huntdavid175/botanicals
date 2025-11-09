@@ -10,7 +10,7 @@ export default function Header() {
     <header>
       {/* Top shipping bar */}
       <motion.div
-        className="bg-[#A33D4A] text-white text-center text-sm py-2"
+        className="bg-[#74a636] text-white text-center text-sm py-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -109,7 +109,7 @@ export default function Header() {
               <path d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
             {count > 0 && (
-              <span className="absolute -top-2 -right-2 h-5 min-w-5 px-1 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 h-5 min-w-5 px-1 rounded-full bg-[#74a636] text-white text-xs flex items-center justify-center">
                 {count}
               </span>
             )}
