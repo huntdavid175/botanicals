@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { gqlRequest } from "../lib/wpClient";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | LovMeds",
+  title: "Privacy Policy | Revive Botanicals",
 };
 
 type PrivacyPolicyQuery = {

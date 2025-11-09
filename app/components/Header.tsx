@@ -27,7 +27,7 @@ export default function Header() {
       >
         {/* Brand */}
         <Link href="/" className="tracking-[0.2em] text-sm font-semibold">
-          LOVMEDS
+          REVIVE BOTANICALS
         </Link>
 
         {/* Center menu */}

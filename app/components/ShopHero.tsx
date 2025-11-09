@@ -13,7 +13,7 @@ type ShopHeroProps = {
 };
 
 export default function ShopHero({
-  title = "Shop LovMeds",
+  title = "Shop Revive Botanicals",
   description,
   imageUrl = HERO_IMAGE_URL,
 }: ShopHeroProps) {
@@ -66,7 +66,7 @@ export default function ShopHero({
         >
           <Image
             src={imageUrl}
-            alt="Shop LovMeds"
+            alt="Shop Revive Botanicals"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"

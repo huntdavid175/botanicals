@@ -17,7 +17,7 @@ export async function generateMetadata({
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" ")
     : "Collections";
-  return { title: `Collections/${pretty} | LovMeds` };
+  return { title: `Collections/${pretty} | Revive Botanicals` };
 }
 
 export default async function CollectionPage({

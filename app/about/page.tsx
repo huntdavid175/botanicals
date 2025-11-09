@@ -7,7 +7,7 @@ import AboutStory from "../components/AboutStory";
 import { gqlRequest } from "../lib/wpClient";
 
 export const metadata: Metadata = {
-  title: "About | LovMeds",
+  title: "About | Revive Botanicals",
 };
 
 type AboutQuery = {

@@ -25,8 +25,8 @@ const headingFont = Bodoni_Moda({
 
 export const metadata: Metadata = {
   title: {
-    default: "LovMeds",
-    template: "%s | LovMeds",
+    default: "Revive Botanicals",
+    template: "%s | Revive Botanicals",
   },
   description: "Natural skincare — gentle, effective, and science-backed.",
 };

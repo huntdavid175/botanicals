@@ -61,10 +61,10 @@ export default function AboutStory({
               </p>
               <p className="mt-6">
                 Born out of the desire to address concerns like
-                hyperpigmentation, dryness, and acne, LovMeds is a celebration
-                of the power of botanicals. We carefully select ingredients that
-                nourish, heal, and protect, ensuring every product is backed by
-                research to deliver real, visible results.
+                hyperpigmentation, dryness, and acne, Revive Botanicals is a
+                celebration of the power of botanicals. We carefully select
+                ingredients that nourish, heal, and protect, ensuring every
+                product is backed by research to deliver real, visible results.
               </p>
               <p className="mt-6">
                 Our commitment goes beyond skincare—we empower our community

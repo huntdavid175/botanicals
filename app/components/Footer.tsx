@@ -16,7 +16,9 @@ export default function Footer() {
         >
           {/* Left: Brand and signup */}
           <div className="lg:col-span-2">
-            <p className="font-heading text-lg tracking-wider">LOVMEDS</p>
+            <p className="font-heading text-lg tracking-wider">
+              REVIVE BOTANICALS
+            </p>
             <p className="mt-6 text-base text-white/80">
               Join our VIP list to receive exclusive discounts and product
               updates.
