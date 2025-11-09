@@ -10,6 +10,7 @@ export type BestSellerItem = {
   imageUrl: string;
   rating: number;
   productId?: number;
+  slug?: string;
 };
 
 export default function BestSellersClient({
@@ -55,11 +56,13 @@ export default function BestSellersClient({
         variants={list}
       >
         {items.map((p) => {
-          const slug = p.title
-            .toLowerCase()
-            .replace(/[^a-z0-9\s-]/g, "")
-            .trim()
-            .replace(/\s+/g, "-");
+          const slug =
+            p.slug ||
+            p.title
+              .toLowerCase()
+              .replace(/[^a-z0-9\s-]/g, "")
+              .trim()
+              .replace(/\s+/g, "-");
           return (
             <motion.div key={`${p.title}-${p.price}`} variants={item}>
               <ProductCard
@@ -78,7 +81,7 @@ export default function BestSellersClient({
       <div className="mt-10 flex justify-center">
         <Link
           href="/shop"
-          className="inline-flex items-center justify-center rounded-full bg-[#6EA53A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+          className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
         >
           See all product
         </Link>

@@ -29,10 +29,10 @@ type CategoriesWithProductsQuery = {
 
 const QUERY = `
   query NewQuery {
-    productCategories {
+    productCategories(first: 100) {
       nodes {
         name
-        products {
+        products(first: 100) {
           edges {
             node {
               name
@@ -117,6 +117,7 @@ export default async function ShopGrid() {
                 : typeof n?.productId === "number"
                 ? n.productId
                 : undefined,
+            slug: typeof n?.slug === "string" ? n.slug : undefined,
           });
         }
       }

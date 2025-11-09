@@ -10,7 +10,7 @@ export default function Header() {
     <header>
       {/* Top shipping bar */}
       <motion.div
-        className="bg-[#6EA53A] text-white text-center text-sm py-2"
+        className="bg-[#A33D4A] text-white text-center text-sm py-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -27,7 +27,7 @@ export default function Header() {
       >
         {/* Brand */}
         <Link href="/" className="tracking-[0.2em] text-sm font-semibold">
-          REVIVE BOTANICALS
+          LOVMEDS
         </Link>
 
         {/* Center menu */}

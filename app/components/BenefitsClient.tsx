@@ -51,7 +51,7 @@ export default function BenefitsClient({
           <div className="mt-8 flex justify-start">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center rounded-full bg-[#6EA53A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+              className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
             >
               Shop Now
             </Link>
@@ -77,7 +77,7 @@ export default function BenefitsClient({
                     <span className="absolute bottom-5 left-5 text-white text-3xl font-light font-heading drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                       {img.label}
                     </span>
-                    <div className="absolute bottom-4 right-4 h-8 w-8 rounded-full bg-[#6EA53A] text-white flex items-center justify-center">
+                    <div className="absolute bottom-4 right-4 h-8 w-8 rounded-full bg-[#A33D4A] text-white flex items-center justify-center">
                       {img.label === "Before" ? (
                         <svg
                           width="16"

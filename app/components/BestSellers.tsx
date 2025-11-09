@@ -21,7 +21,7 @@ type ProductsQuery = {
 
 const QUERY = `
   query NewQuery {
-    products {
+    products (where: {featured: true}, first: 4) {
       edges {
         node {
           featured
@@ -63,7 +63,9 @@ export default async function BestSellersServer() {
         typeof priceRaw === "string" ? priceRaw : `$${priceRaw}`;
       const productId: number | undefined =
         typeof n?.databaseId === "number" ? n.databaseId : undefined;
-      return { title, price, imageUrl, rating: 5, productId };
+      const slug: string | undefined =
+        typeof n?.slug === "string" ? n.slug : undefined;
+      return { title, price, imageUrl, rating: 5, productId, slug };
     });
   } catch (_) {}
 

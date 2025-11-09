@@ -16,9 +16,7 @@ export default function Footer() {
         >
           {/* Left: Brand and signup */}
           <div className="lg:col-span-2">
-            <p className="font-heading text-lg tracking-wider">
-              REVIVE BOTANICALS
-            </p>
+            <p className="font-heading text-lg tracking-wider">LOVMEDS</p>
             <p className="mt-6 text-base text-white/80">
               Join our VIP list to receive exclusive discounts and product
               updates.
@@ -102,7 +100,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/shop"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     Shop
                   </Link>
@@ -110,7 +108,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/collection"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     Collection
                   </Link>
@@ -118,7 +116,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     About
                   </Link>
@@ -131,7 +129,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/shipping-policy"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     Shipping Policy
                   </Link>
@@ -139,7 +137,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/return-policy"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     Return policy
                   </Link>
@@ -147,7 +145,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacy-policy"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     Privacy policy
                   </Link>
@@ -155,7 +153,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/terms-of-service"
-                    className="transition-colors hover:text-[#6EA53A]"
+                    className="transition-colors hover:text-[#A33D4A]"
                   >
                     Terms of Service
                   </Link>

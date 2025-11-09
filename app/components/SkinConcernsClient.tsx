@@ -72,7 +72,7 @@ export default function SkinConcernsClient({
                   <p className="text-white font-heading text-3xl md:text-4xl leading-none drop-shadow ls-title capitalize wrap-break-word">
                     {c.title}
                   </p>
-                  <span className="h-10 w-10 rounded-full bg-[#6EA53A] text-white flex items-center justify-center">
+                  <span className="h-10 w-10 rounded-full bg-[#A33D4A] text-white flex items-center justify-center">
                     <svg
                       width="18"
                       height="18"

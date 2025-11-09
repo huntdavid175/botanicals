@@ -23,7 +23,7 @@ export default function BrandVideoClient({
           muted
           loop
           playsInline
-          src={videoUrl || ""}
+          src={videoUrl || "https://www.pexels.com/download/video/6522548/"}
         />
         <div className="pointer-events-none absolute inset-0 bg-black/50" />
         <motion.div

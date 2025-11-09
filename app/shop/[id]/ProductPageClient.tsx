@@ -132,11 +132,11 @@ export default function ProductPageClient({
                       />
                     ) : (
                       <>
-                        <video
+                        {/* <video
                           src={m.src}
                           className="h-full w-full object-cover"
                           muted
-                        />
+                        /> */}
                         <span className="absolute inset-0 flex items-center justify-center">
                           <span className="h-8 w-8 rounded-full bg-black/60 text-white flex items-center justify-center">
                             ▶
@@ -164,15 +164,16 @@ export default function ProductPageClient({
                     priority
                   />
                 ) : (
-                  <video
-                    key={product.media[mainIndex]?.src}
-                    src={product.media[mainIndex]?.src}
-                    className="h-full w-full object-cover"
-                    controls
-                    autoPlay
-                    muted
-                    playsInline
-                  />
+                  <></>
+                  // <video
+                  //   key={product.media[mainIndex]?.src}
+                  //   src={product.media[mainIndex]?.src}
+                  //   className="h-full w-full object-cover"
+                  //   controls
+                  //   autoPlay
+                  //   muted
+                  //   playsInline
+                  // />
                 )}
               </motion.div>
             </div>
@@ -227,7 +228,7 @@ export default function ProductPageClient({
                     qty,
                   })
                 }
-                className="h-14 rounded-full bg-[#6EA53A] text-white text-lg"
+                className="h-14 rounded-full bg-[#A33D4A] text-white text-lg"
               >
                 Add to Cart
               </button>

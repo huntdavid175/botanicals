@@ -3,8 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const HERO_IMAGE_URL =
-  "https://framerusercontent.com/images/20QD5xeVLKBmv7ucQrtU5RfOUU.png?width=1024&height=1536";
+const HERO_IMAGE_URL = "assets/images/hero1.png";
 
 type HeroProps = {
   titleOverride?: string;
@@ -59,7 +58,7 @@ export default function Hero({
           <div className="mt-8 flex justify-center md:justify-start">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center rounded-full bg-[#6EA53A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
+              className="inline-flex items-center justify-center rounded-full bg-[#A33D4A] text-white px-8 py-4 text-base font-medium transition-colors hover:bg-black"
             >
               Shop Now
             </Link>
@@ -99,7 +98,8 @@ export default function Hero({
         {/* Right: Image (do not animate LCP) */}
         <div className="relative w-full h-full min-h-[440px] md:min-h-[640px] rounded-3xl overflow-hidden">
           <Image
-            src={imageOverride || ""}
+            // src={imageOverride || ""}
+            src="/assets/images/hero2.png"
             alt="Smiling woman applying skincare cream"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

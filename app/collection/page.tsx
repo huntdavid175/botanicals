@@ -8,7 +8,7 @@ import { gqlRequest } from "../lib/wpClient";
 import SkinConcerns from "../components/SkinConcerns";
 
 export const metadata: Metadata = {
-  title: "Collections | Revive Botanicals",
+  title: "Collections | LovMeds",
 };
 
 type CollectionHeroQuery = {

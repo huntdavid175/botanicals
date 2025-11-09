@@ -11,7 +11,7 @@ type Testimonial = { quote: string; author: string };
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "I've struggled with dark spots for years, but after using Revive Botanicals, my skin looks more even and radiant! The moisturizer keeps my skin hydrated all day without feeling greasy. Love it!",
+      "I've struggled with dark spots for years, but after using LovMeds, my skin looks more even and radiant! The moisturizer keeps my skin hydrated all day without feeling greasy. Love it!",
     author: "Aisha M.",
   },
   {

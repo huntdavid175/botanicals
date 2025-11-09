@@ -19,7 +19,7 @@ export async function generateMetadata({
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" ")
     : "Product";
-  return { title: `${pretty} | Revive Botanicals` };
+  return { title: `${pretty} | LovMeds` };
 }
 
 type ProductBySlugQuery = {
@@ -192,7 +192,7 @@ export default async function ProductPage({
         }
         if (out.length >= 4) break;
       }
-      recommendedItems = out.map(({ slug: _s, ...rest }) => rest);
+      recommendedItems = out;
     }
   } catch (e) {
     // keep ISR cache; let page render with client fallback
@@ -202,7 +202,7 @@ export default async function ProductPage({
   return (
     <main className="max-w-[1498px]  mx-auto md:px-6 px-4 pb-16">
       <ProductPageClient id={slug} product={productData} />
-      <Benefits />
+      {/* <Benefits /> */}
       <RecommendedProducts items={recommendedItems} />
     </main>
   );

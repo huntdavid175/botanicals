@@ -8,6 +8,7 @@ type Item = {
   price: string;
   imageUrl: string;
   rating: number;
+  slug?: string;
 };
 
 const FALLBACK_IMAGE =
@@ -50,11 +51,13 @@ export default function RecommendedProducts({ items }: { items?: Item[] }) {
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-3 items-stretch">
         {list.map((p) => {
-          const slug = p.title
-            .toLowerCase()
-            .replace(/[^a-z0-9\s-]/g, "")
-            .trim()
-            .replace(/\s+/g, "-");
+          const slug =
+            p.slug ||
+            p.title
+              .toLowerCase()
+              .replace(/[^a-z0-9\s-]/g, "")
+              .trim()
+              .replace(/\s+/g, "-");
           return (
             <ProductCard
               key={p.title}

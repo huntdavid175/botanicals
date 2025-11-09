@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { gqlRequest } from "../lib/wpClient";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Revive Botanicals",
+  title: "Terms of Service | LovMeds",
 };
 
 type TermsQuery = {
