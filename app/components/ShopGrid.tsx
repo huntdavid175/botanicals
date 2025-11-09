@@ -26,7 +26,7 @@ type CategoriesWithProductsQuery = {
     }> | null;
   } | null;
 };
-
+//
 const QUERY = `
   query NewQuery {
     productCategories(first: 100) {
