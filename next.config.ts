@@ -10,13 +10,13 @@ const nextConfig: NextConfig = {
         pathname: "/images/**",
       },
       {
-        protocol: "https",
-        hostname: "lovmeds.com",
+        protocol: "http",
+        hostname: "shop.regsma.com",
         pathname: "/**",
       },
       {
-        protocol: "https",
-        hostname: "pexels.com",
+        protocol: "http",
+        hostname: "shop.regsma.com",
         pathname: "/**",
       },
     ],
